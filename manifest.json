@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "fun themes for browsing",
     "manifest_version": 3,
-    "author": "Andrii Karpenko, Ian Flynn",
+    "author": "Andrii Karpenko, Ian Flynn", 
     "action":{
         "default_popup": "popup.html",
         "default_title": "Themes"
@@ -16,5 +16,7 @@
             "https://www.google.com/*"
             ]
         }
-    ]
+    ],
+
+    "permissions": ["tabs", "activeTab"]
 }
