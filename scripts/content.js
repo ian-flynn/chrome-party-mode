@@ -28,7 +28,7 @@ function makeMask(onOff, action){
     mask.style.position = 'fixed'; 
     mask.style.top = '0'; 
     mask.style.left = '0'; 
-    mask.style.opacity = '0.5';
+    mask.style.opacity = '0.2';
     mask.style['pointer-events'] = 'none';
     if(action === "rave"){
       mask.style.animation = 'rave 1s infinite';
