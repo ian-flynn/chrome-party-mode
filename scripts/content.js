@@ -1,6 +1,7 @@
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   if (request.action === "toggle_sephia") {
+    console.log(request, sender, sendResponse)
     console.log('action sepia works')
     const giant = document.createElement("div")
   giant.setAttribute('style', 'z-index: 1000; width: 100%; min-height: 100%; background-color: red; position: fixed; top: 0; left: 0; opacity: 0.5;')
