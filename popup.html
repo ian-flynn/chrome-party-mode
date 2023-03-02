@@ -9,22 +9,24 @@
     <script src="background.js" type="text/javascript" defer></script>
 </head>
 <body>
-    <div class="themes">
-        <label class="toggle">
-          <span>Sepia  </span>
-          <input class="checkbox" type="checkbox" id="sepia-toggle" />
-          <span class="slider"></span>
-        </label>
-        <label class="toggle">
+    <h3>Browser Moods</h3>
+    <div class="themes-box">
+        <div class="theme">
+          <span>Western  </span>
+          <button class="sepia-change" value="off">-</button>
+          <button class="sepia-change" value="on">+</button>
+        </div>
+        <div class="theme">
           <span>Dark  </span>
-          <input class="checkbox" type="checkbox" id="dark-toggle" />
-          <span class="slider"></span>
-        </label>
-        <label class="toggle">
+          <button class="dark-change" value="off">-</button>
+          <button class="dark-change" value="on">+</button>
+        </div>
+        <div class="theme">
           <span>Rave  </span>
-          <input class="checkbox" type="checkbox" id="disco-toggle" />
-          <span class="slider"></span>
-        </label>
+          <button class="rave-change" value="off">-</button>
+          <button class="rave-change" value="on">+</button>
+        </div>
+        
       </div>
     
 </body>
