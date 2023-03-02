@@ -1,0 +1,24 @@
+{
+    "name": "BrowseThemes",
+    "version": "1.0.0",
+    "description": "fun themes for browsing",
+    "manifest_version": 3,
+    "author": "Andrii Karpenko, Ian Flynn",
+    "action":{
+        "default_popup": "popup.html",
+        "default_title": "Themes"
+    },
+    "content_scripts": [
+        {
+            "js": ["scripts/content.js"],
+            "matches": [
+            "<all_urls>",
+            "https://www.google.com/*"
+            ]
+        }
+    ],
+    "permissions": ["scripting", "activeTab", "tabs"],
+    "background": {
+    "service_worker": "scripts/popup.js"
+    }
+}
