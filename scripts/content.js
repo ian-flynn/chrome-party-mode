@@ -29,28 +29,30 @@ console.log('hello one')
 // })
 // //,
 
-console.log("Chrome extension is running!");
+// function turnRed(){
+//   const giant = document.createElement("div")
+//   giant.setAttribute('style', 'z-index: 1000; width: 100%; min-height: 100%; background-color: red; position: fixed; top: 0; left: 0; opacity: 0.5;')
+//   // giant.setAttribute('z-index', '1000')
+//   // giant.setAttribute('width', '100vw')
+//   // giant.setAttribute('height', '100vh')
+//   giant.setAttribute('id', 'hello-all')
 
-// Listen for messages
-chrome.runtime.onMessage.addListener(receiver);
+//   // giant.setAttribute('background-color', 'red')
 
-// A message is received
-function receiver(request, sender, sendResponse) {
+//   let body = document.querySelector('body')
+//   body.style.backgroundColor = "black"
+//   body.appendChild(giant)
+// }
+// turnRed()
 
-  // Grab every single DOM element
-  var elts = document.getElementsByTagName('*');
 
-  // Change the background color and font-size
-  // according to the message
-  for (var i = 0; i < elts.length; i++) {
-    elts[i].style['background-color'] = request.color;
-    elts[i].style['font-size'] = request.size + '%';
-  }
-
-}
-
-function turnRed(){
-  const giant = document.createElement("div")
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+  if (request.action === "toggle_sephia") {
+    // Turn the page into sepia theme
+    // document.body.style.backgroundColor = "#f4ecd8";
+    // document.body.style.color = "#7b5741";
+    // You can apply other CSS styles to turn the page into sepia theme
+    const giant = document.createElement("div")
   giant.setAttribute('style', 'z-index: 1000; width: 100%; min-height: 100%; background-color: red; position: fixed; top: 0; left: 0; opacity: 0.5;')
   // giant.setAttribute('z-index', '1000')
   // giant.setAttribute('width', '100vw')
@@ -62,11 +64,8 @@ function turnRed(){
   let body = document.querySelector('body')
   body.style.backgroundColor = "black"
   body.appendChild(giant)
-}
-// turnRed()
-
-
-
+  }
+});
 
 // function changeColor (){
 //     console.log('hello')

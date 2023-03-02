@@ -6,15 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="index.css" rel="stylesheet" type="text/css">
-    <script src="/scripts/popup.js" type="text/javascript" defer></script>
+    <script src="/scripts/background.js" type="text/javascript" defer></script>
 </head>
 <body>
-    <div id="pop-up">
-        <h4>Themes</h4>
-        <button id="sepia-button">Sepia</button>
-        <button>Dark</button>
-        <button>Disco</button>
-    </div>
+    <div class="themes">
+        <label class="toggle">
+          <input type="checkbox" id="sepia-toggle" />
+          <span class="slider"></span>
+          <span>Sepia</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="dark-toggle" />
+          <span class="slider"></span>
+          <span>Dark</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="disco-toggle" />
+          <span class="slider"></span>
+          <span>Disco</span>
+        </label>
+      </div>
     
 </body>
 

@@ -16,9 +16,5 @@
             "https://www.google.com/*"
             ]
         }
-    ],
-    "permissions": ["scripting", "activeTab", "tabs"],
-    "background": {
-    "service_worker": "scripts/popup.js"
-    }
+    ]
 }
