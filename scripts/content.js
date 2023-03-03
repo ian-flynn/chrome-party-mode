@@ -41,13 +41,7 @@ function makeMask(onOff, action){
 
 
 chrome.runtime.onMessage.addListener(function(request) {
-  if (request.action === "sepia") {
-    makeMask(request.onOff, request.action)
-  } else if (request.action === "dark") {
-    makeMask(request.onOff, request.action)
-  } else if (request.action === "rave") {
-    makeMask(request.onOff, request.action)
-  }
+  makeMask(request.onOff, request.action)
 });
 
  
